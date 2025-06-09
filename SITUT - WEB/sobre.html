@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="img/img/LOGOBOA4.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+    <title>Sobre</title>
+
+    <style>
+        /*
+         * ESTILOS GLOBAIS PARA STICKY FOOTER E CORES DE FUNDO
+         * Estas regras garantem que o footer fique no final da página
+         * e que a cor de fundo do body seja mantida.
+         */
+        html {
+            height: 100%; /* Garante que o elemento html ocupe 100% da altura da viewport */
+        }
+
+        body {
+            display: flex; /* Transforma o body em um container flexível */
+            flex-direction: column; /* Organiza os filhos (header, main, footer) em coluna */
+            min-height: 100vh; /* Garante que o body tenha no mínimo a altura da viewport */
+            /* A cor de fundo do body já está definida no atributo style da tag body abaixo */
+        }
+
+        main {
+            flex-grow: 1; /* Faz com que este elemento ocupe todo o espaço disponível entre header e footer */
+        }
+
+        /*
+         * AJUSTES DE ESPAÇAMENTO PARA O CONTEÚDO DA PÁGINA 'SOBRE'
+         * Estes ajustam as margens que podem estar conflitando com o novo layout flex.
+         */
+        .banner-text {
+            /* Remove margens problemáticas e adiciona padding para espaçamento */
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 150px; /* Ajuste conforme a necessidade de espaçamento acima do título */
+            padding-bottom: 50px; /* Ajuste conforme a necessidade de espaçamento abaixo do título */
+        }
+
+        .audio_sobre {
+            /* Remove margens problemáticas e adiciona padding para espaçamento */
+            margin-top: 0 !important;
+            padding-top: 50px; /* Adiciona um espaçamento superior para separar do banner */
+        }
+
+        @media (max-width: 630px) {
+            /* Garante que o menu esteja oculto por padrão em telas pequenas */
+            nav .ul {
+                display: none !important;
+            }
+
+            /* Força a exibição e o posicionamento do menu quando ele está aberto */
+            nav .ul.open {
+                display: flex !important;
+                position: fixed !important; /* Essencial para que ele flutue sobre o conteúdo */
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                clip-path: circle(141.2% at 100% 0) !important;
+                transition: 0.7s !important;
+                z-index: 9999 !important; /* Um z-index bem alto para garantir que ele esteja no topo */
+                background: rgba(0, 143, 43, 0.945) !important; /* Cor de fundo do seu menu mobile */
+            }
+
+            /* Garante que os ícones do menu apareçam no mobile */
+            nav .menu-icon,
+            nav .close-icon {
+                display: block !important;
+                z-index: 10000 !important; /* Ainda mais alto que o menu para ser clicável */
+            }
+
+            /* Ajuste o banner para mobile para evitar espaçamento excessivo */
+            .banner .banner-text {
+                padding-top: 100px; /* Ajusta o padding para mobile */
+                padding-bottom: 30px;
+            }
+
+            /* Ajuste para o audio_sobre no mobile */
+            .audio_sobre {
+                padding-top: 30px; /* Menos espaçamento no topo para mobile */
+            }
+        }
+    </style>
+
+</head>
+<body style="background-color: #FAF9F6;">
+
+    <header style="background-image: url('img/img/capasobre1.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a class="btn" href="contato.html">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Sobre</h1>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <div class="audio_sobre">
+            <audio controls="controls">
+                <source src="audios/audiofinal_sobre.MP3" type="audio/mp3"/>
+                seu navegador não suporta HTML5
+            </audio>
+        </div>
+
+        <section class="sobre">
+            <div class="container">
+                <div class="sobre-text">
+                    <h3 class="tsobre">Seja bem-vindo ao SITUT!</h3>
+                    <p> Nós, do SITUT (Sistema de Irrigação e Teste de Umidade da Terra), temos como objetivo principal desenvolver um sistema
+                        automatizado para a irrigação de espaços produtivos, capaz de realizar regas conforme a leitura de sensores de solo e das
+                        condições climáticas. Adicionalmente, foi desenvolvido um aplicativo para smartphones que permite o controle remoto do sistema,
+                        utilizando a rede de internet.
+                        <br><br>
+                        Atualmente, com o avanço das tecnologias modernas, é possível criar mecanismos que auxiliem pequenos produtores no gerenciamento
+                        otimizado da irrigação de seus espaços produtivos. Isso resulta em um aumento da produtividade e lucratividade do cultivo, além
+                        da preservação do solo e dos recursos hídricos. Por meio de instrumentos tecnológicos, será possível implementar ações automáticas
+                        de irrigação em quantidades e frequências adequadas, minimizando problemas como o desperdício ou a falta de água para a plantação.
+                        Ademais, o sistema oferece ao produtor um controle de gerenciamento fácil, acessível e moderno, através de um aplicativo conectado
+                        à rede wireless.
+                    </p>
+                    <a href="contato.html" class="btn animate-btn">Entrar em Contato</a>
+                </div>
+                <div class="sobre-img">
+                    <img src="img/img/imgsobre1.jpg" alt="Sobre">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <p>Desenvolvido por SITUT Group</p>
+        </div>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
