@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cobalt_blue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:background="@color/midnight_blue"
+        android:text="@string/txt_clima"
+        android:textAllCaps="true"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/offwhite"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/calor"
+        android:layout_marginStart="-340dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:id="@+id/min_Day2"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_minday2"
+        android:textColor="#FDF8F8"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minTemp_d2"
+        app:layout_constraintEnd_toStartOf="@+id/minTemp_d2"
+        tools:text="Min:" />
+
+    <TextView
+        android:id="@+id/minTemp_d2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_mintempd2"
+        android:textColor="#ECE8E8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxTemp_d2" />
+
+    <TextView
+        android:id="@+id/minTemp_d1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_mintempd1"
+        android:textColor="#FDFBFB"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxTemp_d1" />
+
+    <TextView
+        android:id="@+id/maxTemp_d2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_maxtempd2"
+        android:textColor="#FBF9F9"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minTemp_d1" />
+
+    <ImageView
+        android:id="@+id/image_today"
+        android:layout_width="292dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="189dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="156dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_climaHoje"
+        android:textColor="#FAF7F7"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Clima Hoje" />
+
+    <TextView
+        android:id="@+id/text_dataHoje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_dataHoje"
+        android:textColor="#F8F6F6"
+        app:layout_constraintEnd_toEndOf="@+id/image_today"
+        app:layout_constraintTop_toTopOf="@+id/image_today" />
+
+    <TextView
+        android:id="@+id/temp_hoje"
+        android:layout_width="117dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_tempHoie"
+        android:textAlignment="gravity"
+        android:textColor="#FDF9F9"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="@+id/image_today"
+        app:layout_constraintTop_toTopOf="@+id/image_today"
+        tools:text="23ÂºC" />
+
+    <TextView
+        android:id="@+id/condicao_hoje"
+        android:layout_width="140dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center|right"
+        android:text="@string/text_condicao_hoje"
+        android:textColor="#F8F6F6"
+        app:layout_constraintBottom_toBottomOf="@+id/image_today"
+        app:layout_constraintStart_toStartOf="@+id/image_today" />
+
+    <TextView
+        android:id="@+id/next_days"
+        android:layout_width="154dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_nesxt_days"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_today"
+        tools:text="Próximos Dias" />
+
+    <ImageView
+        android:id="@+id/icon_nextDay1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="133dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_today"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageView
+        android:id="@+id/icon_nextDay2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_nextDay1"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/next_day1"
+        android:layout_width="94dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/open_sans_light_italic"
+        android:text="@string/text_nextday1"
+        android:textColor="@color/offwhite"
+        app:layout_constraintStart_toEndOf="@+id/icon_nextDay1"
+        app:layout_constraintTop_toBottomOf="@+id/next_days" />
+
+    <TextView
+        android:id="@+id/next_day2"
+        android:layout_width="94dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/open_sans_light_italic"
+        android:text="@string/text_nextday2"
+        android:textColor="#FBF7F7"
+        app:layout_constraintStart_toEndOf="@+id/icon_nextDay2"
+        app:layout_constraintTop_toBottomOf="@+id/cond_nextDay1" />
+
+    <TextView
+        android:id="@+id/cond_nextDay1"
+        android:layout_width="105dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_light_italic"
+        android:text="@string/text_condnextday1"
+        android:textColor="@color/offwhite"
+        app:layout_constraintStart_toEndOf="@+id/icon_nextDay1"
+        app:layout_constraintTop_toBottomOf="@+id/next_day1" />
+
+    <TextView
+        android:id="@+id/cond_nextDay2"
+        android:layout_width="105dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_light_italic"
+        android:text="@string/text_condnextday2"
+        android:textColor="#FFFCFC"
+        app:layout_constraintStart_toEndOf="@+id/icon_nextDay2"
+        app:layout_constraintTop_toBottomOf="@+id/next_day2" />
+
+    <TextView
+        android:id="@+id/max_Day1"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_maxday1"
+        android:textColor="#FFFDFD"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/maxTemp_d1"
+        app:layout_constraintTop_toTopOf="@+id/maxTemp_d1"
+        tools:text="Max:" />
+
+    <TextView
+        android:id="@+id/min_Day1"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_minday1"
+        android:textColor="#FAF5F5"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minTemp_d1"
+        app:layout_constraintEnd_toStartOf="@+id/minTemp_d1"
+        tools:text="Min:" />
+
+    <TextView
+        android:id="@+id/maxTemp_d1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/text_maxtempd1"
+        android:textColor="#F8F3F3"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_today" />
+
+    <TextView
+        android:id="@+id/max_Day2"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/text_maxday2"
+        android:textColor="#FBF8F8"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@+id/maxTemp_d2"
+        app:layout_constraintTop_toTopOf="@+id/maxTemp_d2"
+        tools:text="Max:" />
+
+    <!-- Botão de Voltar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_voltar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttons_red"
+        android:text="@string/txt_button_voltar"
+        android:textSize="@dimen/buttons"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_Day2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

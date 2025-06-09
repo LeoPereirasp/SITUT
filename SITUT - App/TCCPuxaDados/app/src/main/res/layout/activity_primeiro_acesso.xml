@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cobalt_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".primeiro_acesso">
+
+    <!-- Imagem de Fundo da Tela -->
+    <ImageView
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="410dp"
+        android:src="@drawable/mao"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título da Tela -->
+    <TextView
+        android:id="@+id/title_acesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_acesso"
+        android:textSize="@dimen/title_acesso"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        android:shadowColor="@color/midnight_blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botão de Primeiro Acesso -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPrimeiravez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="@dimen/text_button"
+        android:text="@string/txt_button_primeiravez"
+        android:textColor="@color/offwhite"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:background="@drawable/background_button_selector"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/title_acesso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão de Acesso de Outras Vezes -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOutravez"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="@dimen/text_button"
+        android:textColor="@color/offwhite"
+        android:text="@string/txt_button_outravez"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:padding="15dp"
+        android:background="@drawable/background_button_selector"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/btnPrimeiravez"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Imagem de engrenagem em fundo transparente -->
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="1360dp"
+        android:layout_marginStart="-400dp"
+        android:alpha="0.5"
+        android:src="@drawable/engrenagemwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título para a seção de atualização -->
+    <TextView
+        android:id="@+id/title_atualizacao"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/title_atualizacao"
+        android:textSize="@dimen/txt_upadate"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        android:shadowColor="@color/offwhite"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

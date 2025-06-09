@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/royal_blue">
+
+    <!-- Título "Histórico de Irrigação" -->
+    <TextView
+        android:id="@+id/titulo_historico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tela4"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        android:fontFamily="@font/chonkypumpkin"
+        android:shadowColor="@color/midnight_blue"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Imagem/Gif "Gráfico do Histórico de Irrigação" -->
+    <ImageView
+        android:id="@+id/imagem_grafico"
+        android:layout_width="1000dp"
+        android:layout_height="220dp"
+        android:src="@drawable/grafico"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/txt3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container do primeiro texto de instrução -->
+    <View
+        android:id="@+id/txt1"
+        android:layout_width="380dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/container_title"
+        app:layout_constraintTop_toBottomOf="@id/titulo_historico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Conteúdo do primeiro texto de instrução -->
+    <TextView
+        android:id="@+id/text_instrucoes_1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/Tela4.1"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/offwhite"
+        android:justificationMode="inter_word"
+        android:fontFamily="@font/librebaskerville"
+        app:layout_constraintTop_toTopOf="@id/txt1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container do segundo texto de instrução -->
+    <View
+        android:id="@+id/txt2"
+        android:layout_width="380dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/container_title"
+        app:layout_constraintTop_toBottomOf="@id/txt1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Conteúdo do segundo texto de instrução -->
+    <TextView
+        android:id="@+id/text_instrucoes_2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/Tela4.2"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/offwhite"
+        android:justificationMode="inter_word"
+        android:fontFamily="@font/librebaskerville"
+        app:layout_constraintTop_toTopOf="@id/txt2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container do terceiro texto de instrução -->
+    <View
+        android:id="@+id/txt3"
+        android:layout_width="380dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/container_title"
+        app:layout_constraintTop_toBottomOf="@id/txt2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Conteúdo do terceiro texto de instrução -->
+    <TextView
+        android:id="@+id/text_instrucoes_3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/Tela4.3"
+        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/offwhite"
+        android:justificationMode="inter_word"
+        android:fontFamily="@font/librebaskerville"
+        app:layout_constraintTop_toTopOf="@id/txt3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

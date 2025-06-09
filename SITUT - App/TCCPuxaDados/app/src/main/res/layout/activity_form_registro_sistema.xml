@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cobalt_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form_registro_sistema">
+
+    <!-- Imagem de fundo com engrenagem - Desfoque com baixa opacidade -->
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="1000dp"
+        android:layout_marginTop="-250dp"
+        android:src="@drawable/engrenagem"
+        android:alpha="0.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Segunda imagem de engrenagem para efeito de sobreposição -->
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="1000dp"
+        android:layout_marginTop="148dp"
+        android:alpha="0.2"
+        android:src="@drawable/engrenagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título da tela de registro -->
+    <TextView
+        android:id="@+id/title_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_Registro"
+        android:textSize="@dimen/criarsistem"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        android:shadowColor="@color/midnight_blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Contêiner para os campos de registro -->
+    <View
+        android:layout_marginTop="295dp"
+        android:id="@+id/container_registrosystem"
+        style="@style/ContainerRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagem de computador como ilustração do formulário de registro -->
+    <ImageView
+        android:id="@+id/computer"
+        android:layout_width="00dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="-152dp"
+        android:src="@drawable/computer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_registro" />
+
+    <!-- Campo de entrada de texto para o nome do sistema -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-170dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:boxStrokeColor="@color/cyan"
+        app:boxBackgroundColor="@color/offwhite"
+        app:boxBackgroundMode="filled"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/midnight_blue"
+        app:errorTextColor="@color/red"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/computer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_system"
+            android:textColorHint="@color/midnight_blue"
+            android:textSize="@dimen/logar"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_username"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de entrada de texto para a data do sistema -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:boxStrokeColor="@color/cyan"
+        app:boxBackgroundColor="@color/offwhite"
+        app:boxBackgroundMode="filled"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/midnight_blue"
+        app:errorTextColor="@color/red"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/txtInputLayoutName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_datacria"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/logar"
+            android:inputType="date"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_calendary"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão para concluir o cadastro do sistema -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/txt_button_criar"
+        android:textAllCaps="true"
+        android:textSize="@dimen/logar"
+        android:textStyle="bold"
+        android:textColor="@color/offwhite"
+        android:padding="15dp"
+        android:background="@drawable/background_button_selector"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/container_registrosystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnjacriei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/txt_jacriei"
+        android:textAllCaps="true"
+        android:textSize="@dimen/logar"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:background="@drawable/button"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/btnCadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

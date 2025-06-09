@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/fundo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form_status">
+
+    <!-- Barra Superior "Status Gerais" -->
+    <TextView
+        android:id="@+id/home"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/midnight_blue"
+        android:text="@string/txt_status"
+        android:textColor="@color/offwhite"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_title_status"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Icone de status na barra superior -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="-340dp"
+        android:background="@drawable/statusw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Caixa de título "Sensores" -->
+    <View
+        android:id="@+id/status"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:background="@drawable/container_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Caixa branca para layout de ícones na seção "Status Gerais" -->
+    <View
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="-270dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/container_white"
+        style="@style/ContainerWhite"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Outro ícone de status na seção de título -->
+    <View
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/statusb"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Texto "Sensores" na seção de título -->
+    <TextView
+        android:id="@+id/statusg"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="80dp"
+        android:text="@string/txt_sensores"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title_status"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/status"/>
+
+    <!-- Caixa de status de umidade -->
+    <View
+        android:id="@+id/umid"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/container_midnight"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/status"/>
+
+    <!-- Caixa para layout do ícone de umidade -->
+    <View
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="-270dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/container_white"
+        style="@style/ContainerWhite"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/status"/>
+
+    <!-- Ícone de umidade -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/umidadeepng"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/umid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/umid" />
+
+    <!-- Texto "Umidade" -->
+    <TextView
+        android:id="@+id/umidadeTextView"
+        android:layout_width="210dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="80dp"
+        android:text="@string/txt_umidade"
+        android:textAllCaps="true"
+        android:textColor="@color/offwhite"
+        android:shadowColor="@color/cobalt_blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:textSize="@dimen/text_status"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/umid"/>
+
+    <!-- Caixa de status de chuva -->
+    <View
+        android:id="@+id/chuva"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/container_midnight"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/umid"/>
+
+    <!-- Caixa para layout do ícone de chuva -->
+    <View
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="-270dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/container_white"
+        style="@style/ContainerWhite"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/chuva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/umid"/>
+
+    <!-- Ícone de chuva -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/chuvaa"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/chuva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chuva"/>
+
+    <!-- Texto "Chuva" -->
+    <TextView
+        android:id="@+id/chuvaTextView"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="80dp"
+        android:text="@string/txt_chuva"
+        android:textAllCaps="true"
+        android:textColor="@color/offwhite"
+        android:shadowColor="@color/cobalt_blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:textSize="@dimen/text_status"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chuva"/>
+
+    <!-- Caixa de status UV -->
+    <View
+        android:id="@+id/uv"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/container_midnight"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chuva"/>
+
+    <!-- Caixa para layout do ícone UV -->
+    <View
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="-270dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/container_white"
+        style="@style/ContainerWhite"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/uv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chuva"/>
+
+    <!-- Ícone UV -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/uv"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/uv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/uv"/>
+
+    <!-- Texto "UV" -->
+    <TextView
+        android:id="@+id/uvTextView"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="80dp"
+        android:text="@string/txt_sol"
+        android:textAllCaps="true"
+        android:textColor="@color/offwhite"
+        android:shadowColor="@color/cobalt_blue"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:textSize="@dimen/text_status"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/uv"/>
+
+    <!-- Imagem de logotipo -->
+    <View
+        android:id="@+id/logotipo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/logotipo2"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uv"/>
+
+    <!-- Botão de Voltar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_voltar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttons_red"
+        android:text="@string/txt_button_voltar"
+        android:textSize="@dimen/buttons"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logotipo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

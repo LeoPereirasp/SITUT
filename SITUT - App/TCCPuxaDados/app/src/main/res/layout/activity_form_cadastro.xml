@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cobalt_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormCadastro">
+
+    <!-- Container Superior -->
+    <View
+        android:id="@+id/containerTop"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/offwhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Container dos Componentes de Cadastro -->
+    <View
+        android:id="@+id/containerCadastro"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título da Tela de Cadastro -->
+    <TextView
+        android:id="@+id/title_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:text="@string/title_Cad"
+        android:textSize="@dimen/cadastre"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagem de Verificação de Usuário -->
+    <ImageView
+        android:id="@+id/userverific"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/usuario_verificado"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo de Texto para Nome -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:boxStrokeColor="@color/cyan"
+        app:boxBackgroundColor="@color/offwhite"
+        app:boxBackgroundMode="filled"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/midnight_blue"
+        app:errorTextColor="@color/red"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/title_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Entrada para Nome do Usuário -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:textColorHint="@color/midnight_blue"
+            android:textSize="@dimen/logar"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_username"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Texto para Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:boxStrokeColor="@color/cyan"
+        app:boxBackgroundColor="@color/offwhite"
+        app:boxBackgroundMode="filled"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/midnight_blue"
+        app:errorTextColor="@color/red"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/txtInputLayoutName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Entrada para Email do Usuário -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/midnight_blue"
+            android:textSize="@dimen/logar"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Texto para Senha -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:boxStrokeColor="@color/cyan"
+        app:boxBackgroundColor="@color/offwhite"
+        app:boxBackgroundMode="filled"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/midnight_blue"
+        app:errorTextColor="@color/red"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/txtInputLayoutEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Entrada para Senha do Usuário -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_senha"
+            android:textSize="@dimen/logar"
+            android:textColor="@color/black"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Texto para "Esqueceu a Senha?" -->
+    <TextView
+        android:id="@+id/esqueceu_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/txt_esqueceu_senha"
+        android:textSize="@dimen/logar"
+        android:textColor="@color/offwhite"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/containerCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão de Cadastro -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/txt_button_cadastrar"
+        android:textAllCaps="true"
+        android:textSize="@dimen/logar"
+        android:textStyle="bold"
+        android:textColor="@color/offwhite"
+        android:padding="15dp"
+        android:background="@drawable/background_button_selector"
+        android:enabled="true"
+        app:layout_constraintTop_toBottomOf="@id/esqueceu_senha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Container Inferior -->
+    <View
+        android:id="@+id/finalview"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_view_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Logo Centralizado no Rodapé -->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/logoclara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/finalview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

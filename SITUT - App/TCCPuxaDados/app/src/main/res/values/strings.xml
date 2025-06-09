@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">SITUT</string>
+    <string name="default_web_client_id">357066227875-nl4rfgnrs2sjra4t6lobo2km5nuhp0s4.apps.googleusercontent.com</string>
+
+    <!-- Texto da Tela de "Clima" -->
+    <string name="txt_clima">Clima</string>
+    <string name="text_minday2">Min:</string>
+    <string name="text_mintempd2">text_mintempd2</string>
+    <string name="text_mintempd1">text_mintempd1</string>
+    <string name="text_maxtempd2">text_maxtempd2</string>
+    <string name="text_climaHoje">Clima Hoje</string>
+    <string name="text_dataHoje">text_dataHoje</string>
+    <string name="text_tempHoie">text_tempHoje</string>
+    <string name="text_condicao_hoje">text_condicaoHoje</string>
+    <string name="text_nesxt_days">Próximos Dias</string>
+    <string name="text_nextday1">text_nextday1</string>
+    <string name="text_nextday2">text_nextday2</string>
+    <string name="text_condnextday1">text_condnextday1</string>
+    <string name="text_condnextday2">text_condnextdayy2</string>
+    <string name="text_maxday1">Max:</string>
+    <string name="text_minday1">Min:</string>
+    <string name="text_maxtempd1">text_maxtempd1</string>
+    <string name="text_maxday2">Max:</string>
+
+    <!-- Textos das Telas de "Login e Cadastro" que sáo usados mais de uma vez se necessário -->
+    <string name="hint_nomeuser">Nome do Usuário</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_name">Nome</string>
+    <string name="txt_button_entrar">Entrar</string>
+    <string name="txt_cadastro"><u>Ainda não tem conta? Cadastre-se Aqui!</u></string>
+    <string name="txt_button_cadastrar">Cadastrar</string>
+    <string name="txt_esqueceu_senha"><u>Esqueceu sua senha? Clique Aqui!</u></string>
+    <string name="title_Cad">Cadastre-se</string>
+
+    <!-- Textos da Tela de Primeiro Acesso" -->
+    <string name="title_acesso">Já acessou nosso aplicativo antes?</string>
+    <string name="txt_button_primeiravez">Minha primeira vez</string>
+    <string name="txt_button_outravez">Já acessei outras vezes</string>
+    <string name="title_atualizacao">Fique por dentro das nossas últimas atualizações</string>
+
+    <!-- Texto da Tela de "Criar Sistema" -->
+    <string name="title_Registro">Criar Sistema</string>
+    <string name="hint_system">Nome do Sistema</string>
+    <string name="hint_date">Data de Criação</string>
+    <string name="txt_button_criar">Criar</string>
+    <string name="txt_jacriei">Já Possuo Sistema</string>
+
+    <!-- Texto da Tela "Home" Principal -->
+    <string name="title_home">Home</string>
+    <string name="txt_button_clima">Clima</string>
+    <string name="txt_button_status">Status Gerais</string>
+    <string name="txt_button_info">Histórico</string>
+    <string name="txt_button_irrigacao">Irrigação</string>
+    <string name="txt_button_voltar">Voltar</string>
+
+    <!-- Texto da Tela de "Histórico" -->
+    <string name="txt_hist">Histórico</string>
+    <string name="txt_btn_download">Download PDF</string>
+    <string name="txt_info">Histórico de Irrigação</string>
+    <string name="title_bar">Gráfico de Barra</string>
+    <string name="title_pizza">Gráfico de Pizza</string>
+    <string name="sensor_chuva"><b>Chuva:</b> Menor valor = mais chuva, não precisa regar. Maior valor = menos chuva ou contato com ela, regar mais.</string>
+    <string name="sensor_uv"><b>UV:</b> Maior valor = mais sol, ideal para plantas que precisam de luz. Menor valor = menos sol, ideal para plantas de sombra.</string>
+    <string name="sensor_umidade"><b>Umidade:</b> Menor valor = mais umidade na terra, regar menos. Maior valor = menos umidade, regar mais.</string>
+
+    <!-- Texto da Tela de "Status Gerais" -->
+    <string name="txt_status">Status Gerais</string>
+    <string name="txt_sensores">Sensores</string>
+    <string name="txt_umidade">Umidade</string>
+    <string name="txt_chuva">Chuva</string>
+    <string name="txt_sol">Raios UV</string>
+
+    <!-- Texto da Tela de "Irrigação" -->
+    <string name="txt_irriga">Irrigação</string>
+    <string name="txt_personalizar">Personalizar</string>
+    <string name="txt_intervalo">Intervalo(Horas)</string>
+    <string name="txt_duracao">Duração(Minutos)</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_descartar">Descartar</string>
+    <string name="button_irrigar">Irrigar</string>
+
+    <!-- Texto da Tela de "Sobre Nós" -->
+    <string name="txt_sobre">Sobre Nós</string>
+    <string name="saiba">O SITUT (Sistema de Irrigação e Teste de Umidade da Terra) é um projeto focado na criação de um sistema automatizado de irrigação para áreas produtivas. Nosso objetivo é otimizar a rega de acordo com dados coletados de sensores de solo e informações climáticas, promovendo eficiência e sustentabilidade no uso de recursos hídricos.</string>
+    <string name="saibamais">Saiba Mais</string>
+
+    <!-- Texto da Tela de "Usuário" -->
+    <string name="title_perfil">Meu Perfil</string>
+    <string name="hint_datacria">Data de Criação</string>
+    <string name="hint_datatime">__ /__ /__</string>
+    <string name="txt_button_sair">Sair</string>
+
+    <!-- Texto do "Swipe 0" -->
+    <string name="tela0">Bem-Vindo ao SITUT!</string>
+    <string name="Tela0.1">1º - Conheça o que o SITUT proporciona para que você tenha o maior cuidado com suas plantas.</string>
+    <string name="Tela0.2">2º - Vamos guiá-lo pela configuração e mostrar como o app funciona.</string>
+    <!-- Texto do "Swipe 1" -->
+    <string name="tela1">Como Funciona a Instalação</string>
+    <string name="Tela1.1">1º - A instalação do SITUT começa com a colocação dos sensores e de uma válvula em seu jardim.</string>
+    <string name="Tela1.2">2º - Em seguida, o sistema é registrado no app, o que pode ser feito por você ou por um técnico.</string>
+    <string name="Tela1.3">3° - Após o registro, seu sistema já estará pronto para funcionar automaticamente.</string>
+    <!-- Texto do "Swipe 2" -->
+    <string name="tela2">Clima e Irrigação</string>
+    <string name="Tela2.1">1º - O app ajusta a irrigação de acordo com o clima da sua região, garantindo que suas plantas recebam a quantidade ideal de água.</string>
+    <string name="Tela2.2">2º - Você também pode personalizar o intervalo de irrigação, definindo horários e frequência.</string>
+    <string name="Tela2.3">3° - Sempre que a irrigação começar, o app notificará você.</string>
+    <!-- Texto do "Swipe 3" -->
+    <string name="tela3">Monitoramento dos Sensores</string>
+    <string name="Tela3.1">1º - Com o SITUT, você pode monitorar o status dos sensores instalados no seu jardim de onde estiver.</string>
+    <string name="Tela3.2">2º - Os valores variam de 0 a 1023, e cada sensor possui uma função, explicada na tela de Histórico.</string>
+    <string name="Tela3.3">3° - Isso permite que você saiba exatamente quando e como a irrigação está acontecendo.</string>
+    <!-- Texto do "Swipe 4" -->
+    <string name="tela4">Histórico de Irrigação</string>
+    <string name="Tela4.1">1º - O app oferece acesso ao histórico completo da irrigação da sua horta.</string>
+    <string name="Tela4.2">2º - Ele exibe gráficos que mostram os valores dos sensores e como está a irrigação da sua planta.</string>
+    <string name="Tela4.3">3° - Você também pode gerar e baixar relatórios em PDF para acompanhar o desempenho do sistema.</string>
+    <!-- Texto do "Swipe 5" -->
+    <string name="tela5">Acessibilidade e dúvidas</string>
+    <string name="Tela5.1">1º - O app possui a home como acesso para todas as funcionalidades do app.</string>
+    <string name="Tela5.2">2º - Na tela de usuário você pode dar logout da aplicação e manter seus dados salvos.</string>
+    <string name="Tela5.3">3° - Caso tenha dúvidas ou precise de ajuda, entre em contato conosco através do nosso site.</string>
+    <!-- Texto do "Swipe 6" -->
+    <string name="tela6">Tudo Pronto!</string>
+    <string name="Tela6.1">1º - Agora seu SITUT está configurado e pronto para uso!</string>
+    <string name="Tela6.2">2º - Monitore seu jardim, personalize sua irrigação, economize tempo e muito mais, tudo de onde estiver.</string>
+
+</resources>

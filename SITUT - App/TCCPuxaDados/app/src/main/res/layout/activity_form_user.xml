@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/cobalt_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form_User">
+
+    <!-- Título do Perfil -->
+    <TextView
+        android:id="@+id/perfil"
+        android:layout_width="500dp"
+        android:layout_height="55dp"
+        android:background="@color/midnight_blue"
+        android:text="@string/title_perfil"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/offwhite"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botão de Sair -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sair"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="350dp"
+        android:background="@drawable/sair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Contêiner de Imagem do Usuário -->
+    <ImageView
+        android:id="@+id/container_user"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/container_user"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Ícone do Usuário dentro do Container -->
+    <ImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/container_user"
+        app:layout_constraintEnd_toEndOf="@+id/container_user"
+        app:layout_constraintTop_toTopOf="@+id/container_user"
+        app:layout_constraintBottom_toBottomOf="@+id/container_user" />
+
+    <!-- Campo de Texto para Nome do Usuário -->
+    <TextView
+        android:id="@+id/txtNomeUsuario"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/hint_nomeuser"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/texts"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Campo de Texto para E-mail -->
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/hint_email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/texts"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Campo de Texto para Data e Hora -->
+    <TextView
+        android:id="@+id/txtDataSistema"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_edittext"
+        android:hint="@string/hint_datatime"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/texts"
+        android:gravity="center"
+        android:inputType="date"
+        android:maxLines="1"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Logotipo -->
+    <View
+        android:id="@+id/logotipo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/logotipo2"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtDataSistema" />
+
+    <!-- Botão de Voltar -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_voltar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttons_red"
+        android:text="@string/txt_button_voltar"
+        android:textSize="@dimen/buttons"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logotipo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
